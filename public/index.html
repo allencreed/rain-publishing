@@ -119,6 +119,66 @@
         .ambient-shadow-high {
             box-shadow: 0px 12px 40px rgba(2, 6, 33, 0.15);
         }
+        /* Full-bleed book cover marquee, scrolls right to left */
+        .cover-marquee {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #020621 0%, #00478d 60%, #036a5f 100%);
+            padding: 4rem 0;
+        }
+        .cover-marquee::before,
+        .cover-marquee::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 8rem;
+            z-index: 5;
+            pointer-events: none;
+        }
+        .cover-marquee::before {
+            left: 0;
+            background: linear-gradient(to right, #020621, transparent);
+        }
+        .cover-marquee::after {
+            right: 0;
+            background: linear-gradient(to left, #020621, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            width: max-content;
+            animation: cover-marquee-scroll 45s linear infinite;
+            will-change: transform;
+        }
+        .cover-marquee:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        .marquee-track img {
+            height: 17rem;
+            width: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0px 12px 40px rgba(2, 6, 33, 0.45);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        .marquee-track img:hover {
+            transform: scale(1.06);
+        }
+        @media (max-width: 767px) {
+            .marquee-track img { height: 11rem; }
+            .cover-marquee { padding: 2.5rem 0; }
+            .cover-marquee::before, .cover-marquee::after { width: 3rem; }
+        }
+        @keyframes cover-marquee-scroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track { animation: none; }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
@@ -688,6 +748,27 @@
 <span class="material-symbols-outlined text-base">arrow_forward</span>
 </a>
 </div>
+</div>
+</section>
+<!-- Full-Bleed Book Cover Marquee -->
+<section class="cover-marquee w-full" aria-label="Rain Publishing book covers scrolling gallery">
+<div class="marquee-track">
+<img src="images/covers/and-then-there-was-jesus.jpg" alt="And Then There Was Jesus by Pooja Chilukuri" loading="lazy"/>
+<img src="images/covers/take-your-position.jpg" alt="Take Your Position by Candra Ward" loading="lazy"/>
+<img src="images/covers/ask-candra-hairstylist.jpg" alt="21 Things Your Hairstylist Should Tell You by Candra Ward" loading="lazy"/>
+<img src="images/covers/originally-red.jpg" alt="Originally RED by Nicole Michelle Pertillar" loading="lazy"/>
+<img src="images/covers/whats-your-story.jpg" alt="What's Your Story? by Rachel Renee Smith" loading="lazy"/>
+<img src="images/covers/dear-husband.jpg" alt="Dear Husband by Rachel Renee" loading="lazy"/>
+<img src="images/covers/bag-ladies.jpg" alt="Bag Ladies: Unpacked by Kimberly A. Cullen and Rachel Renee Smith" loading="lazy"/>
+<img src="images/covers/still-living.jpg" alt="Still Living by Marcel Anderson" loading="lazy"/>
+<img src="images/covers/and-then-there-was-jesus.jpg" alt="And Then There Was Jesus by Pooja Chilukuri" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/take-your-position.jpg" alt="Take Your Position by Candra Ward" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/ask-candra-hairstylist.jpg" alt="21 Things Your Hairstylist Should Tell You by Candra Ward" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/originally-red.jpg" alt="Originally RED by Nicole Michelle Pertillar" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/whats-your-story.jpg" alt="What's Your Story? by Rachel Renee Smith" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/dear-husband.jpg" alt="Dear Husband by Rachel Renee" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/bag-ladies.jpg" alt="Bag Ladies: Unpacked by Kimberly A. Cullen and Rachel Renee Smith" loading="lazy" aria-hidden="true"/>
+<img src="images/covers/still-living.jpg" alt="Still Living by Marcel Anderson" loading="lazy" aria-hidden="true"/>
 </div>
 </section>
 <!-- Footer -->
