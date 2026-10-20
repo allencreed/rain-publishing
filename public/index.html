@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rain Publishing | Publish Your Dream Book</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#727783",
+                        "surface-tint": "#005db6",
+                        "background": "#f9f9ff",
+                        "ink-black": "#020621",
+                        "secondary": "#036a5f",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001b3d",
+                        "secondary-fixed-dim": "#84d5c7",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#ecedf6",
+                        "surface-container-low": "#f2f3fb",
+                        "on-tertiary-container": "#ffcfb9",
+                        "paper-white": "#FFFFFF",
+                        "tertiary": "#793100",
+                        "secondary-container": "#a0f2e3",
+                        "surface-container-high": "#e7e8f0",
+                        "primary": "#00478d",
+                        "on-surface": "#191c21",
+                        "on-tertiary-fixed": "#341100",
+                        "on-primary-fixed-variant": "#00468c",
+                        "inverse-surface": "#2e3037",
+                        "on-secondary-fixed-variant": "#005047",
+                        "secondary-fixed": "#a0f2e3",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c6d4",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "surface": "#f9f9ff",
+                        "on-secondary-fixed": "#00201c",
+                        "surface-variant": "#e1e2ea",
+                        "primary-container": "#005eb8",
+                        "on-tertiary-fixed-variant": "#793100",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#eff0f8",
+                        "inverse-primary": "#a9c7ff",
+                        "on-surface-variant": "#424752",
+                        "slate-gray": "#4A5568",
+                        "on-background": "#191c21",
+                        "on-secondary-container": "#137165",
+                        "surface-container-highest": "#e1e2ea",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d8dae2",
+                        "on-primary-container": "#c8daff",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "tertiary-container": "#9f4300",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a9c7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "1rem",
+                        "margin-desktop": "5rem",
+                        "section-gap": "8rem",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1.25rem",
+                        "stack-sm": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        .bg-gradient-hero {
+            background: linear-gradient(135deg, rgba(0, 71, 141, 0.9) 0%, rgba(2, 6, 33, 0.9) 100%);
+        }
+        .ambient-shadow-low {
+            box-shadow: 0px 4px 20px rgba(2, 6, 33, 0.1);
+        }
+        .ambient-shadow-high {
+            box-shadow: 0px 12px 40px rgba(2, 6, 33, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-paper-white/80 dark:bg-ink-black/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm dark:shadow-none transition-all duration-200">
+<div class="flex justify-between items-center h-20 max-w-[1280px] mx-auto px-margin-desktop max-md:px-margin-mobile">
+<a class="flex items-center gap-2 cursor-pointer transition-all duration-200 active:scale-95" href="#">
+<img alt="Rain Publishing Logo" class="h-10 object-contain" src="images/logo.svg"/>
+</a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 font-body-md text-body-md transition-all duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Blog</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<a class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded hover:opacity-90 transition-opacity cursor-pointer active:scale-95" href="tel:919-587-7841">Get In Touch</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-ink-black p-2">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-hero z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Abstract artistic representation of a book with glowing pages in a dark setting, conceptualizing imagination and storytelling" src="images/hero.svg"/>
+</div>
+<div class="relative z-20 max-w-[1280px] mx-auto px-margin-desktop max-md:px-margin-mobile text-center text-paper-white space-y-stack-md flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg max-md:text-4xl">Publish Your Dream Book!</h1>
+<p class="font-headline-md text-headline-md font-normal max-w-2xl mx-auto text-primary-fixed-dim">The world is waiting to hear your voice!</p>
+<div class="mt-8 flex gap-4 max-md:flex-col">
+<a class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded hover:bg-primary-container transition-colors inline-block tracking-wider uppercase" href="#services">Explore Services</a>
+<a class="bg-transparent border border-paper-white text-paper-white font-label-sm text-label-sm px-8 py-4 rounded hover:bg-paper-white/10 transition-colors inline-block tracking-wider uppercase" href="#contact">Let's Chat</a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-desktop max-md:px-margin-mobile max-w-[1280px] mx-auto" id="services"><div class="text-center mb-16 max-w-3xl mx-auto space-y-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/30 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">auto_stories</span>
+<span>End-to-End Publishing Excellence</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-ink-black dark:text-paper-white tracking-tight">Tailored Services for Discerning Authors</h2>
+<p class="font-body-lg text-on-surface-variant">From raw inspiration to bookstore shelves, we deliver expert editorial craftsmanship, strategic publishing guidance, and bespoke author care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Writing Services -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/40 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">edit_document</span>
+</div>
+<span class="text-xs font-label-sm font-semibold uppercase tracking-wider text-outline px-2.5 py-1 rounded bg-surface-container">Core craft</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold mb-3 text-ink-black dark:text-paper-white">Writing &amp; Ghostwriting</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">Collaborative manuscript creation, executive ghostwriting, and developmental book architecture customized to your authentic voice.</p>
+<ul class="space-y-2 mb-8 text-sm text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Complete Manuscript Drafting</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Chapter Outline &amp; Arc Mapping</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> In-Depth Author Interviews</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-between text-primary dark:text-primary-fixed font-label-sm text-sm font-semibold pt-4 border-t border-outline-variant/20 hover:text-primary-container transition-colors" href="#contact">
+<span>Explore Writing Plans</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2: Editing Support -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">spellcheck</span>
+</div>
+<span class="text-xs font-label-sm font-semibold uppercase tracking-wider text-secondary px-2.5 py-1 rounded bg-secondary-fixed/20">Refinement</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold mb-3 text-ink-black dark:text-paper-white">Editing Support</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">Rigorous multi-stage editorial critique ensuring impeccable narrative cadence, tone consistency, and structural brilliance.</p>
+<ul class="space-y-2 mb-8 text-sm text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Developmental &amp; Structural Edit</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Comprehensive Line &amp; Copyediting</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Final Pre-Press Proofreading</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-between text-primary dark:text-primary-fixed font-label-sm text-sm font-semibold pt-4 border-t border-outline-variant/20 hover:text-primary-container transition-colors" href="#contact">
+<span>Request Manuscript Review</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3: Writing Concierge (Featured) -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/80 p-8 rounded-xl shadow-md hover:shadow-lg transition-all border-2 border-primary relative flex flex-col justify-between group">
+<div class="absolute -top-3.5 right-6 bg-primary text-on-primary font-label-sm text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+      Most Popular
+    </div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<span class="text-xs font-label-sm font-semibold uppercase tracking-wider text-primary px-2.5 py-1 rounded bg-primary-fixed/30">Full Concierge</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold mb-3 text-ink-black dark:text-paper-white">Writing Concierge</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">White-glove project direction managing your entire publication schedule from raw draft to market launch.</p>
+<ul class="space-y-2 mb-8 text-sm text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Dedicated Publishing Director</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Weekly Milestones &amp; Account Planning</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Production &amp; Vendor Oversight</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-between text-primary dark:text-primary-fixed font-label-sm text-sm font-semibold pt-4 border-t border-outline-variant/20 hover:text-primary-container transition-colors" href="#contact">
+<span>Book Concierge Call</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4: Self Publishing -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/40 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<span class="text-xs font-label-sm font-semibold uppercase tracking-wider text-outline px-2.5 py-1 rounded bg-surface-container">Global Launch</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold mb-3 text-ink-black dark:text-paper-white">Self Publishing</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">Complete technical execution for independent authors retaining 100% of royalties and total creative copyright.</p>
+<ul class="space-y-2 mb-8 text-sm text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> ISBN, Barcodes &amp; Copyright Filing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Interior Typesetting &amp; Cover Prep</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Global Distribution (Amazon &amp; Ingram)</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-between text-primary dark:text-primary-fixed font-label-sm text-sm font-semibold pt-4 border-t border-outline-variant/20 hover:text-primary-container transition-colors" href="#contact">
+<span>View Publishing Specs</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 5: Author Coaching -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">co_present</span>
+</div>
+<span class="text-xs font-label-sm font-semibold uppercase tracking-wider text-outline px-2.5 py-1 rounded bg-surface-container">Mentorship</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold mb-3 text-ink-black dark:text-paper-white">Author Coaching</h3>
+<p class="text-on-surface-variant font-body-md text-sm mb-6">One-on-one tailored sessions with seasoned literary mentors to break through blocks and cultivate your writing discipline.</p>
+<ul class="space-y-2 mb-8 text-sm text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> 1:1 Live Strategy &amp; Craft Sessions</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Creative Accountability Roadmaps</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Targeted Manuscript Feedback</li>
+</ul>
+</div>
+<a class="inline-flex items-center justify-between text-primary dark:text-primary-fixed font-label-sm text-sm font-semibold pt-4 border-t border-outline-variant/20 hover:text-primary-container transition-colors" href="#contact">
+<span>Meet Our Coaches</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 6: Consultation / Custom Package Banner -->
+<div class="bg-gradient-hero text-paper-white p-8 rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-paper-white/20 text-paper-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">tune</span>
+</div>
+<h3 class="font-headline-md text-2xl font-bold mb-3 text-paper-white">Custom Publishing Plan</h3>
+<p class="text-primary-fixed-dim font-body-md text-sm mb-6">Not sure which package fits your stage? We tailor custom end-to-end publishing roadmaps suited to your manuscript, goals, and budget.</p>
+<div class="space-y-2 mb-8 text-sm text-primary-fixed font-body-md">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-base">check</span> Free 30-Minute Author Strategy Session</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-base">check</span> Comprehensive Budget &amp; Timeline Estimate</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center bg-paper-white text-ink-black font-label-sm text-sm uppercase tracking-wider py-3 px-6 rounded hover:bg-surface-container transition-colors font-semibold" href="tel:919-587-7841">
+<span>Schedule Free Call</span>
+</a>
+</div>
+</div></section>
+<!-- Watch & Learn Section -->
+<section class="py-section-gap px-margin-desktop max-md:px-margin-mobile max-w-[1280px] mx-auto bg-surface-container-low rounded-3xl my-12"><div class="text-center mb-14 max-w-3xl mx-auto space-y-4 px-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed/40 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">videocam</span>
+<span>Author Spotlight</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-ink-black dark:text-paper-white">Hear From Our Published Authors</h2>
+<p class="font-body-lg text-on-surface-variant">Real journeys, candid breakthroughs, and the joy of holding their published books in hand.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8">
+<!-- Video Testimonial 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col group">
+<div class="relative aspect-video bg-ink-black overflow-hidden cursor-pointer">
+<img alt="Author Marcus Vance discussing his publishing journey" class="w-full h-full object-cover opacity-75 group-hover:scale-105 group-hover:opacity-60 transition-all duration-300" src="images/author-marcus.svg"/>
+<div class="absolute top-3 left-3 bg-ink-black/80 backdrop-blur-sm text-paper-white text-xs font-label-sm px-2.5 py-1 rounded">
+        Memoir &amp; Biography
+      </div>
+<div class="absolute top-3 right-3 bg-ink-black/80 backdrop-blur-sm text-paper-white text-xs font-label-sm px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span> 4:18
+      </div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-14 h-14 rounded-full bg-primary-container text-paper-white flex items-center justify-center group-hover:scale-110 shadow-lg transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl icon-filled">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic mb-4">"Rain Publishing gave structure to my memoir when I felt overwhelmed. In 8 months, I held a printed masterpiece."</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<h4 class="font-headline-md text-base font-bold text-ink-black">Marcus Vance</h4>
+<p class="text-xs text-outline font-label-sm">Author of <span class="italic font-semibold">Echoes of Faith</span></p>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+</div>
+</div>
+</div>
+<!-- Video Testimonial 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col group">
+<div class="relative aspect-video bg-ink-black overflow-hidden cursor-pointer">
+<img alt="Dr. Elena Ross on writing non-fiction business book" class="w-full h-full object-cover opacity-75 group-hover:scale-105 group-hover:opacity-60 transition-all duration-300" src="images/author-elena.svg"/>
+<div class="absolute top-3 left-3 bg-ink-black/80 backdrop-blur-sm text-paper-white text-xs font-label-sm px-2.5 py-1 rounded">
+        Business Leadership
+      </div>
+<div class="absolute top-3 right-3 bg-ink-black/80 backdrop-blur-sm text-paper-white text-xs font-label-sm px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span> 5:32
+      </div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-14 h-14 rounded-full bg-primary-container text-paper-white flex items-center justify-center group-hover:scale-110 shadow-lg transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl icon-filled">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic mb-4">"The editorial rigor and marketing roadmap took my manuscript to the top business new release ranking."</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<h4 class="font-headline-md text-base font-bold text-ink-black">Dr. Elena Ross</h4>
+<p class="text-xs text-outline font-label-sm">Author of <span class="italic font-semibold">The Agile Anchor</span></p>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+</div>
+</div>
+</div>
+<!-- Video Testimonial 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-outline-variant/30 flex flex-col group">
+<div class="relative aspect-video bg-ink-black overflow-hidden cursor-pointer">
+<img alt="Author Sarah Jenkins discussing self-publishing coaching" class="w-full h-full object-cover opacity-75 group-hover:scale-105 group-hover:opacity-60 transition-all duration-300" src="images/author-sarah.svg"/>
+<div class="absolute top-3 left-3 bg-ink-black/80 backdrop-blur-sm text-paper-white text-xs font-label-sm px-2.5 py-1 rounded">
+        Literary Fiction
+      </div>
+<div class="absolute top-3 right-3 bg-ink-black/80 backdrop-blur-sm text-paper-white text-xs font-label-sm px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span> 3:45
+      </div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-14 h-14 rounded-full bg-primary-container text-paper-white flex items-center justify-center group-hover:scale-110 shadow-lg transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl icon-filled">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic mb-4">"From coaching calls to interior layout perfection, Rain Publishing treated my debut novel with supreme care."</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<h4 class="font-headline-md text-base font-bold text-ink-black">Sarah Jenkins</h4>
+<p class="text-xs text-outline font-label-sm">Author of <span class="italic font-semibold">The Quiet Horizon</span></p>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust & Performance Metric Strip -->
+<div class="mt-14 pt-10 border-t border-outline-variant/30 px-6 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+<div>
+<div class="font-headline-lg text-3xl font-bold text-primary mb-1">150+</div>
+<p class="text-xs uppercase font-label-sm text-on-surface-variant tracking-wider">Published Authors</p>
+</div>
+<div>
+<div class="font-headline-lg text-3xl font-bold text-primary mb-1">100%</div>
+<p class="text-xs uppercase font-label-sm text-on-surface-variant tracking-wider">Royalties Kept</p>
+</div>
+<div>
+<div class="font-headline-lg text-3xl font-bold text-primary mb-1">98%</div>
+<p class="text-xs uppercase font-label-sm text-on-surface-variant tracking-wider">On-Time Launch</p>
+</div>
+<div>
+<div class="font-headline-lg text-3xl font-bold text-primary mb-1">4.9 / 5</div>
+<p class="text-xs uppercase font-label-sm text-on-surface-variant tracking-wider">Author Satisfaction</p>
+</div>
+</div></section><section class="py-section-gap px-margin-desktop max-md:px-margin-mobile max-w-[1280px] mx-auto my-12" id="coach"><div class="bg-surface-container-lowest dark:bg-ink-black/60 border border-outline-variant/30 rounded-3xl p-8 md:p-12 shadow-sm hover:shadow-md transition-all"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"><div class="lg:col-span-5 flex flex-col items-center"><div class="relative w-full max-w-sm mx-auto"><div class="absolute -inset-2 rounded-3xl bg-secondary-fixed/30 transform -rotate-2 -z-0"></div><div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-primary/20 z-10 bg-surface-container-low"><img alt="Rachel Renee, MBA - Founder, CEO &amp; Chief Editor" class="w-full h-auto object-cover aspect-square" src="images/founder-rachel.svg"/><div class="absolute bottom-0 inset-x-0 bg-gradient-hero/90 p-4 text-paper-white backdrop-blur-sm"><div class="flex items-center justify-between"><span class="font-headline-md text-base font-bold text-paper-white">Rachel Renee, MBA</span><span class="material-symbols-outlined text-secondary-fixed text-xl">verified</span></div><p class="text-xs text-primary-fixed-dim font-label-sm">Founder, CEO &amp; Chief Editor</p></div></div><div class="absolute -bottom-4 -right-4 z-20 bg-primary text-on-primary px-4 py-2 rounded-xl shadow-md border border-paper-white flex items-center gap-2"><span class="material-symbols-outlined text-base icon-filled">verified_user</span><span class="text-xs font-label-sm font-semibold uppercase tracking-wider">16+ Years Excellence</span></div></div></div><div class="lg:col-span-7 space-y-6"><div><div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/30 text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-4"><span class="material-symbols-outlined text-sm">psychology</span><span>Meet The Founder &amp; Coach</span></div><h2 class="font-headline-lg text-headline-lg text-ink-black dark:text-paper-white tracking-tight mb-2">Meet Your Coach: Rachel Renee, MBA</h2><p class="text-secondary font-headline-md text-lg font-semibold">Founder, CEO &amp; Chief Editor</p></div><p class="font-body-md text-on-surface-variant text-base leading-relaxed">Rachel Renee holds a B.S. degree in Communication from Seton Hall University and an M.B.A. from the University of Phoenix. After years of editing and coaching clients in their writing pursuits, Rachel launched Rain Publishing to assist authors through the publishing process from beginning to end. She lovingly guides writers through their creative journey and is committed to honoring your story and message by publishing it in excellence.</p><div class="bg-surface-container-low dark:bg-ink-black/80 border-l-4 border-primary p-4 rounded-r-xl space-y-2"><p class="text-xs uppercase font-label-sm tracking-wider text-outline font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">format_quote</span> Coach's Philosophy</p><p class="font-body-md text-sm italic text-on-surface-variant">"Rain Publishing was created by a self-published author for self-published authors. We don’t believe in a cookie-cutter approach — we get to know your specific voice and message to customize your journey precisely for you."</p></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2"><div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container dark:bg-ink-black/40 border border-outline-variant/20"><span class="material-symbols-outlined text-primary text-lg">school</span><span class="text-xs font-label-sm font-semibold text-ink-black dark:text-paper-white">B.S. Seton Hall &amp; MBA Phoenix</span></div><div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container dark:bg-ink-black/40 border border-outline-variant/20"><span class="material-symbols-outlined text-primary text-lg">history_edu</span><span class="text-xs font-label-sm font-semibold text-ink-black dark:text-paper-white">Ghostwriter &amp; Master Editor</span></div></div><div class="pt-4 flex flex-wrap gap-4 items-center"><a class="inline-flex items-center gap-2 bg-primary text-on-primary font-label-sm text-sm font-semibold px-6 py-3.5 rounded hover:bg-primary-container transition-colors uppercase tracking-wider shadow-sm active:scale-95" href="tel:919-587-7841"><span>Book a 1:1 Discovery Call</span><span class="material-symbols-outlined text-base">arrow_forward</span></a><div class="flex items-center gap-2 text-xs font-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">sms</span><span>Text <strong>"Destiny"</strong> to <strong>919-587-7841</strong></span></div></div></div></div></div></section><!-- Meet Your Authors Showcase Section -->
+<section class="py-section-gap px-margin-desktop max-md:px-margin-mobile max-w-[1280px] mx-auto my-12" id="authors">
+<div class="text-center mb-14 max-w-3xl mx-auto space-y-4 px-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/30 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">group</span>
+<span>Celebrated Rain Publishing Authors</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-ink-black dark:text-paper-white tracking-tight">Meet Our Published Authors</h2>
+<p class="font-body-lg text-on-surface-variant">Meet the inspiring voices and visionary thought leaders who partnered with Rain Publishing to transform their lived experiences into published reality.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Author Card 1: Daniel Stephens -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-6 rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center text-primary font-headline-md font-bold text-xl overflow-hidden shadow-sm">
+            DS
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-md text-lg font-bold text-ink-black dark:text-paper-white">Daniel Stephens</h3>
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+</div>
+<span class="text-xs font-label-sm uppercase tracking-wider text-secondary font-semibold">Memoir &amp; Personal Growth</span>
+</div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic">"Working with Rachel Renee gave my story clarity and wings. Rain Publishing turned my raw manuscript into a bookstore-ready treasure."</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-sm text-outline">
+<span>Published Work: <strong class="text-ink-black dark:text-paper-white">Walking Through Fire</strong></span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed/30 text-primary font-semibold">Bestseller</span>
+</div>
+</div>
+<!-- Author Card 2: Annette Johnson -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-6 rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed/40 border-2 border-secondary flex items-center justify-center text-secondary font-headline-md font-bold text-xl overflow-hidden shadow-sm">
+            AJ
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-md text-lg font-bold text-ink-black dark:text-paper-white">Annette Johnson</h3>
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+</div>
+<span class="text-xs font-label-sm uppercase tracking-wider text-secondary font-semibold">Christian Faith &amp; Devotional</span>
+</div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic">"The ghostwriting and developmental coaching was anointed and meticulous. Rachel treats every word with sacred excellence."</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-sm text-outline">
+<span>Published Work: <strong class="text-ink-black dark:text-paper-white">Grace Unshakable</strong></span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed/30 text-secondary font-semibold">Devotional</span>
+</div>
+</div>
+<!-- Author Card 3: Pooja Chilukuri -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-6 rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary-fixed/40 border-2 border-primary flex items-center justify-center text-primary font-headline-md font-bold text-xl overflow-hidden shadow-sm">
+            PC
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-md text-lg font-bold text-ink-black dark:text-paper-white">Pooja Chilukuri</h3>
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+</div>
+<span class="text-xs font-label-sm uppercase tracking-wider text-secondary font-semibold">Wellness &amp; Mindful Living</span>
+</div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic">"From typesetting and interior formatting to Amazon distribution, Rain Publishing handled every detail seamlessly."</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-sm text-outline">
+<span>Published Work: <strong class="text-ink-black dark:text-paper-white">The Quiet Awakening</strong></span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-ink-black font-semibold">New Release</span>
+</div>
+</div>
+<!-- Author Card 4: Hasani Pettiford -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-6 rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center text-primary font-headline-md font-bold text-xl overflow-hidden shadow-sm">
+            HP
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-md text-lg font-bold text-ink-black dark:text-paper-white">Hasani Pettiford</h3>
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+</div>
+<span class="text-xs font-label-sm uppercase tracking-wider text-secondary font-semibold">Marriage &amp; Relationships</span>
+</div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic">"A mastermind in executive publishing. Rachel and her team honor the integrity of your voice while elevating the craft to international standards."</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-sm text-outline">
+<span>Published Work: <strong class="text-ink-black dark:text-paper-white">Covenant Foundations</strong></span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed/30 text-primary font-semibold">National Tour</span>
+</div>
+</div>
+<!-- Author Card 5: Candra Ward -->
+<div class="bg-surface-container-lowest dark:bg-ink-black/60 p-6 rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed/40 border-2 border-secondary flex items-center justify-center text-secondary font-headline-md font-bold text-xl overflow-hidden shadow-sm">
+            CW
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-md text-lg font-bold text-ink-black dark:text-paper-white">Candra Ward</h3>
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+</div>
+<span class="text-xs font-label-sm uppercase tracking-wider text-secondary font-semibold">Purpose &amp; Women's Empowerment</span>
+</div>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant italic">"Rain Publishing gave me the courage and structural discipline to write my truth unapologetically. Truly life-transforming."</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-sm text-outline">
+<span>Published Work: <strong class="text-ink-black dark:text-paper-white">Unmasked &amp; Unstoppable</strong></span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed/30 text-secondary font-semibold">Top 10</span>
+</div>
+</div>
+<!-- Author Card 6: Marcus Vance & Dr. Elena Ross -->
+<div class="bg-gradient-hero text-paper-white p-6 rounded-2xl shadow-md flex flex-col justify-between">
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-paper-white/20 text-xs font-label-sm font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm">star</span> Hall of Fame
+        </div>
+<h3 class="font-headline-md text-xl font-bold text-paper-white">Your Story Belongs Here</h3>
+<p class="font-body-md text-sm text-primary-fixed-dim leading-relaxed">Over 150 authors have walked this path, keeping 100% of their royalties while crafting heirloom-quality books that impact generations.</p>
+</div>
+<div class="pt-4 border-t border-paper-white/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-label-sm text-xs font-semibold uppercase tracking-wider text-paper-white hover:text-primary-fixed-dim transition-colors" href="tel:919-587-7841">
+<span>Join Our Author Family</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 8-Book Cover Showcase Section -->
+<section class="py-section-gap px-margin-desktop max-md:px-margin-mobile max-w-[1280px] mx-auto bg-surface-container-low rounded-3xl my-12" id="book-showcase">
+<div class="text-center mb-14 max-w-3xl mx-auto space-y-4 px-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed/40 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+<span>Masterpiece Portfolio</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-ink-black dark:text-paper-white tracking-tight">Book Cover Showcase</h2>
+<p class="font-body-lg text-on-surface-variant">Every book we produce features custom visual identity, pristine typographic hierarchy, and magnetic shelf appeal designed for high-conversion market impact.</p>
+</div>
+<!-- 8 Book Cover Mockups in 4x2 Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-8">
+<!-- Book 1 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-primary/40 bg-gradient-to-br from-[#003366] to-[#020621] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-primary-fixed opacity-80">A Memoir</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">Echoes of Faith</h3>
+<p class="text-[11px] text-primary-fixed-dim mt-1 font-body-md">A Journey Through the Valley to Victory</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-secondary-fixed opacity-75">wb_sunny</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Marcus Vance</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Foreword by Dr. E. Ross</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-secondary-fixed/30 text-secondary font-semibold">Inspirational Memoir</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">Echoes of Faith</h4>
+<p class="text-xs text-outline font-label-sm">By Marcus Vance</p>
+</div>
+</div>
+<!-- Book 2 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-[#137165] bg-gradient-to-br from-[#036a5f] to-[#00201c] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-secondary-fixed opacity-80">Executive Leadership</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">The Agile Anchor</h3>
+<p class="text-[11px] text-secondary-container mt-1 font-body-md">Stabilizing Vision in Turbulent Markets</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-paper-white opacity-75">anchor</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Dr. Elena Ross</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Global Fortune 500 Mentor</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-primary-fixed/30 text-primary font-semibold">Business Leadership</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">The Agile Anchor</h4>
+<p class="text-xs text-outline font-label-sm">By Dr. Elena Ross</p>
+</div>
+</div>
+<!-- Book 3 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-[#9f4300] bg-gradient-to-br from-[#793100] to-[#191c21] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-tertiary-fixed opacity-80">Faith &amp; Devotion</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">Grace Unshakable</h3>
+<p class="text-[11px] text-tertiary-fixed-dim mt-1 font-body-md">Daily Bread for Troubled Waters</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-tertiary-fixed opacity-75">spa</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Annette Johnson</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Rain Publishing Bestseller</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-surface-container text-ink-black font-semibold">Christian Faith</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">Grace Unshakable</h4>
+<p class="text-xs text-outline font-label-sm">By Annette Johnson</p>
+</div>
+</div>
+<!-- Book 4 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-primary bg-gradient-to-br from-[#020621] to-[#00478d] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-primary-fixed opacity-80">Literary Fiction</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">The Quiet Horizon</h3>
+<p class="text-[11px] text-primary-fixed-dim mt-1 font-body-md">A Novel of Healing &amp; Renewal</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-secondary-fixed opacity-75">filter_vintage</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Sarah Jenkins</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Author of Whispering Pines</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-secondary-fixed/30 text-secondary font-semibold">Fiction</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">The Quiet Horizon</h4>
+<p class="text-xs text-outline font-label-sm">By Sarah Jenkins</p>
+</div>
+</div>
+<!-- Book 5 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-secondary bg-gradient-to-br from-[#00201c] to-[#036a5f] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-secondary-fixed opacity-80">Inner Peace</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">The Quiet Awakening</h3>
+<p class="text-[11px] text-secondary-container mt-1 font-body-md">Finding Stillness in a Noisy World</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-secondary-fixed opacity-75">self_improvement</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Pooja Chilukuri</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Certified Mindfulness Guide</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-secondary-fixed/30 text-secondary font-semibold">Self-Discovery</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">The Quiet Awakening</h4>
+<p class="text-xs text-outline font-label-sm">By Pooja Chilukuri</p>
+</div>
+</div>
+<!-- Book 6 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-primary bg-gradient-to-br from-[#001b3d] to-[#005eb8] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-primary-fixed opacity-80">Personal Growth</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">Walking Through Fire</h3>
+<p class="text-[11px] text-primary-fixed-dim mt-1 font-body-md">Turning Adversity Into Your Superpower</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-tertiary-fixed opacity-75">local_fire_department</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Daniel Stephens</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">National Keynote Speaker</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-primary-fixed/30 text-primary font-semibold">Spiritual Growth</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">Walking Through Fire</h4>
+<p class="text-xs text-outline font-label-sm">By Daniel Stephens</p>
+</div>
+</div>
+<!-- Book 7 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-tertiary-container bg-gradient-to-br from-[#341100] to-[#793100] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-tertiary-fixed opacity-80">Empowerment</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">Unmasked &amp; Unstoppable</h3>
+<p class="text-[11px] text-tertiary-fixed-dim mt-1 font-body-md">Stepping Boldly into Your Divine Calling</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-secondary-fixed opacity-75">diamond</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Candra Ward</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Empowerment Strategist</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-secondary-fixed/30 text-secondary font-semibold">Poetry &amp; Purpose</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">Unmasked &amp; Unstoppable</h4>
+<p class="text-xs text-outline font-label-sm">By Candra Ward</p>
+</div>
+</div>
+<!-- Book 8 -->
+<div class="group cursor-pointer flex flex-col items-center text-center">
+<div class="relative w-48 h-68 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 border-l-4 border-primary bg-gradient-to-br from-[#020621] to-[#137165] p-5 flex flex-col justify-between text-paper-white overflow-hidden aspect-[1/1.45]">
+<div class="text-left">
+<span class="text-[10px] font-label-sm uppercase tracking-widest text-secondary-fixed opacity-80">Mastery &amp; Relationships</span>
+<h3 class="font-headline-md text-base font-bold tracking-tight mt-1 leading-tight">Covenant Foundations</h3>
+<p class="text-[11px] text-secondary-container mt-1 font-body-md">Architecting Multigenerational Legacies</p>
+</div>
+<div class="my-auto flex justify-center py-2">
+<span class="material-symbols-outlined text-3xl text-paper-white opacity-75">shield</span>
+</div>
+<div class="border-t border-paper-white/20 pt-2 text-left">
+<p class="text-[11px] font-semibold tracking-wider font-label-sm text-paper-white">Hasani Pettiford</p>
+<span class="text-[9px] text-outline-variant block uppercase tracking-wider">Celebrated Author &amp; Speaker</span>
+</div>
+</div>
+<div class="mt-4 space-y-1">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-label-sm bg-primary-fixed/30 text-primary font-semibold">Executive Mindset</span>
+<h4 class="font-headline-md text-sm font-bold text-ink-black dark:text-paper-white mt-1">Covenant Foundations</h4>
+<p class="text-xs text-outline font-label-sm">By Hasani Pettiford</p>
+</div>
+</div>
+</div>
+<!-- Guiding statement leading directly to Book Templates -->
+<div class="mt-16 pt-10 border-t border-outline-variant/30 text-center max-w-3xl mx-auto px-4 space-y-6">
+<p class="font-headline-md text-xl md:text-2xl text-ink-black dark:text-paper-white font-semibold leading-relaxed">
+      Ready to visualize your own story? Explore our handcrafted book cover templates and start designing today.
+    </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary font-label-sm text-sm font-semibold px-8 py-4 rounded hover:bg-primary-container transition-colors uppercase tracking-wider shadow-md active:scale-95 cursor-pointer" href="#templates">
+<span>Browse Book Cover Templates</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-ink-black w-full py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-[1280px] mx-auto px-margin-desktop max-md:px-margin-mobile">
+<div class="space-y-4">
+<h4 class="font-headline-md text-headline-md font-bold text-ink-black dark:text-paper-white">Rain Publishing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The Spirit Is In The Details.</p>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-sm text-label-sm text-ink-black uppercase tracking-wider">Links</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-ink-black dark:hover:text-paper-white transition-colors font-body-md text-body-md hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-ink-black dark:hover:text-paper-white transition-colors font-body-md text-body-md hover:underline" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-ink-black dark:hover:text-paper-white transition-colors font-body-md text-body-md hover:underline" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-sm text-label-sm text-ink-black uppercase tracking-wider">Connect</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-ink-black dark:hover:text-paper-white transition-colors font-body-md text-body-md hover:underline" href="#">Author Portal</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-ink-black dark:hover:text-paper-white transition-colors font-body-md text-body-md hover:underline" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-sm text-label-sm text-ink-black uppercase tracking-wider">Contact</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Duluth, GA<br/>info@rainpublishing.com<br/>919-587-7841</p>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop max-md:px-margin-mobile mt-12 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed">© 2024 Rain Publishing. The Spirit Is In The Details.</p>
+</div>
+</footer>
+</main>
+</body></html>
